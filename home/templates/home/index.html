@@ -1,5 +1,48 @@
 {% extends "base.html" %}
 
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
-    <h1 class="display-4 text-success">It work's</h1>
+<main role="main">
+
+  <div class="jumbotron text-center">
+    <div class="container">
+      <h1 class="display-4">Welcome to Leo's Cycles!</h1>
+      <br>
+      <p class="lead text-muted">This website has been created to assist you in all of your bike maintenance needs.</p>
+      <p class="lead text-muted">Whether you want to arrange a one-off maintenance check on your current bike or want to set up a regular check-up across the calendar year, we're here to help!</p>
+      <p>
+        <a href="" class="btn btn-secondary rounded text-uppercase my-2">Register</a>
+        <a href="" class="btn btn-secondary rounded text-uppercase my-2">Login</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Heading</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>Heading</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>Heading</h2>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+      </div>
+    </div>
+    <hr>
+  </div>
+</main>
 {% endblock %}
