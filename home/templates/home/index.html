@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -10,40 +11,38 @@
 
 {% block content %}
 <main role="main">
+    <div class="hero-image">
+        <div class="hero-text">   
+            <h1>Welcome</h1>
+            <p class="lead text-muted">We are here to assist you in all of your bike maintenance needs. Travelling directly to you at home and completing all the work there.</p>
+            <p class="lead text-muted">Whether you want to arrange a one-off maintenance check on your current bike or you are looking to set up a regular check-up across the calendar year, we're here to help!</p>
+            <p class="lead text-muted">Check out what services are available to our customers below or start your journey by registering an account with us.</p>
+            <a href="#" class="btn btn-secondary rounded text-uppercase my-4 hero-btn">Lets get started</a>
+        </div>
+    </div>
 
-  <div class="jumbotron text-center">
     <div class="container">
-      <h1 class="display-4">Welcome to Leo's Cycles!</h1>
-      <br>
-      <p class="lead text-muted">We are here to assist you in all of your bike maintenance needs. Travelling directly to you at home and completing all the work there.</p>
-      <p class="lead text-muted">Whether you want to arrange a one-off maintenance check on your current bike or you are looking to set up a regular check-up across the calendar year, we're here to help!</p>
-      <p class="lead text-muted">Check out what services are available to our customers below or start your journey by registering an account with us.</p>
-      <p>
-        <a href="#" class="btn btn-secondary rounded text-uppercase my-2">Register</a>
-        <a href="#" class="btn btn-secondary rounded text-uppercase my-2">Login</a>
-      </p>
+        <div class="row">
+        <div class="col-md-4">
+            <h2>Level 1</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p>£44.99</p>
+            <p><a href="#" class="btn btn-secondary" role="button">View details »</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Level 2</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p>£89.99</p>
+            <p><a href="#" class="btn btn-secondary" role="button">View details »</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Level 3</h2>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p>£179.99</p>
+            <p><a href="#" class="btn btn-secondary" role="button">View details »</a></p>
+        </div>
+        </div>
+        <hr>
     </div>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <h2>Standard Service</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a href="#" class="btn btn-secondary" role="button">View details »</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>Bespoke Service</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a href="#" class="btn btn-secondary" role="button">View details »</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>Community Events</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a href="#" class="btn btn-secondary" role="button">View details »</a></p>
-      </div>
-    </div>
-    <hr>
-  </div>
 </main>
 {% endblock %}

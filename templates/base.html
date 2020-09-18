@@ -15,6 +15,9 @@
     
     {% block corecss %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
     {% endblock %}
 
     {% block extra_css %}
@@ -32,54 +35,61 @@
     <title>Leo's Cycles {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <header class="container-fluid fixed-top">
-        <div class="row">
-            <div class="col-sm my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h3 class="logo-font my-0"><strong>Leo's </strong>Cycles</h3>
-                </a>
-            </div>
-            <div class="col-sm my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                    <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div><i class="fal fa-user fa-lg"></i></div>
-                                <p class="my-0">My Account</p>
-                            </div>
+    <header>
+        <div class="container">
+            <!-- Navbar -->
+                <nav class="navbar fixed-top nav-background">
+                <!-- Home Link and Title -->
+                    <div class="home-logo">
+                        <a href="{% url 'home' %}" class="nav-link">
+                            <h3> Leo's Cycles</h3>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                            {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %}
-                                    <a href="" class="dropdown-item">Service Management</a>
-                                {% endif %}
-                                <a href="" class="dropdown-item">My Profile</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                            {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                            {% endif %}
-                        </div>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
-                            <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                <p class="my-0">
-                                    {% if grand_total %}
-                                        ${{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                        $0.00
+                    </div>
+                    <!-- Right-hand dropdown -->
+                    <button class="hamburger" id="hamburger">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <ul class="list-inline nav-ul" id="nav-ul">
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li class="list-inline-item dropdown">
+                            <a class="nav-link" href="#" id="user-account-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="user-account-options">
+                                {% if request.user.is_authenticated %}
+                                    {% if request.user.is_superuser %}
+                                        <a href="#" class="dropdown-item">Internal Management</a>
                                     {% endif %}
-                                </p>
+                                    <a href="#" class="dropdown-item">My Profile</a>
+                                    <a href="#" class="dropdown-item">Order History</a>
+                                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                {% else %}
+                                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                {% endif %}
                             </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+                        </li>
+                    </ul>
+            </nav>
+        <!-- /.Navbar -->
+
+        <!-- Basket option taken from CI tutorial
+                <li class="list-inline-item">
+                    <a href="" class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link">
+                        <div class="text-center">
+                            <p class="my-0">
+                                {% if grand_total %}
+                                    ${{ grand_total|floatformat:2 }}
+                                {% else %}
+                                    $0.00
+                                {% endif %}
+                            </p>
+                        </div>
+                    </a>
+                </li>
+        End of alternative using BS      -->
+
+        </div> 
     </header>
-    
 
     {% if messages %}
         <div class="message-container"></div>
@@ -91,7 +101,7 @@
     {% block content %}
     {% endblock %}
 
-    {% block  postloadjs %}
+    {% block postloadjs %}
     {% endblock %}
     
   </body>

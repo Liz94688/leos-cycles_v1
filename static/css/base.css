@@ -1,0 +1,110 @@
+html, body {
+    height: 100%;
+}
+
+/* Navbar */
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: centre;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.nav-background {
+    background-color: #000;
+}
+
+.home-logo {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+
+.home-logo a {
+    color: #fff;
+}
+
+.home-logo a.nav-link {
+    padding: 10px 20px;
+}
+
+.home-logo a.nav-link h3 {
+    margin: 0px;
+}
+
+.nav-ul {
+    display: flex;
+    align-items: centre;
+    justify-content: center;
+    padding: 0px;
+    list-style-type: none;
+}
+
+.nav-ul li a {
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    background-color: #000;
+}
+
+.hamburger {
+    background-color: transparent;
+    display: none;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 25px;
+
+}
+
+.hamburger:focus {
+    outline: none;
+}
+
+/* Hero image - Home */ 
+.hero-image {
+    background: url('/media/homepage_image2.jpg') no-repeat center;
+    background-size: cover;
+    position: relative;
+    padding-top: 100px;
+}
+
+.hero-text {
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    color: #000;
+}
+
+.hero-text h1{
+    margin: 0px 0px 40px; 
+    color: #000;
+}
+
+.hero-btn {
+    background-color: #000;
+    border-color: #000;
+}
+/* Media Queries */
+
+/* Screen is less than 767px */
+@media screen and (max-width: 767px) {
+    .nav-ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-ul.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
