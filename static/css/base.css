@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto&display=swap');
+
 html, body {
     height: 100%;
+    font-family: 'Poppins', 'Roboto';
 }
 
 /* Navbar */
 .nav {
     display: flex;
     flex-wrap: wrap;
-    align-items: centre;
+    align-items: center;
     justify-content: space-between;
     padding: 15px;
 }
@@ -35,7 +38,7 @@ html, body {
 
 .nav-ul {
     display: flex;
-    align-items: centre;
+    align-items: center;
     justify-content: center;
     padding: 0px;
     list-style-type: none;
@@ -66,18 +69,23 @@ html, body {
     outline: none;
 }
 
-/* Hero image - Home */ 
+/* Header - push block page_header down */
+.header-container {
+    padding-top: 60px;
+}
+
+/* Hero image on home page */ 
 .hero-image {
-    background: url('/media/homepage_image2.jpg') no-repeat center;
-    background-size: cover;
-    position: relative;
-    padding-top: 100px;
+    background: url('/media/homepage_image2.jpg') no-repeat center center fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
 }
 
 .hero-text {
+    padding: 25px 20px 20px 20px;
     text-align: center;
-    top: 50%;
-    left: 50%;
     color: #000;
 }
 
@@ -86,13 +94,39 @@ html, body {
     color: #000;
 }
 
-.hero-btn {
+/* Buttons */
+.btn-black {
     background-color: #000;
     border-color: #000;
 }
+
+/* Service header on home page */
+.services-header {
+    padding: 10px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+}
+
+.services-header h2 {
+    margin: 0px;
+    font-weight: 300;
+}
+
+/* Service header on home page */
+.service-cards {
+    display: flex;
+    justify-content: centre;
+    padding-top: 15px;
+}
+
+.service-cards div {
+    margin-left: 5px;
+    margin-right: 5px;
+}
 /* Media Queries */
 
-/* Screen is less than 767px */
+/* Changes to navbar when screen is less than 767px */
 @media screen and (max-width: 767px) {
     .nav-ul {
         display: none;
@@ -106,5 +140,20 @@ html, body {
 
     .hamburger {
         display: block;
+    }
+}
+
+/* Changes to service cards when screen is less than 767px */
+@media screen and (max-width: 767px) {
+    .service-cards {
+        flex-direction: column;
+    }
+
+/* Changes to hero-text when screen is greater than 768px */
+@media screen and (min-width: 768px) {
+    .hero-text {
+        padding: 25px 65px 15px 65px;
+        text-align: center;
+        color: #000;
     }
 }
