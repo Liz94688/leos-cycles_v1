@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
+    <div class="container top-margin">
         <div class="row">
             <div class="col"></div>
         </div>
@@ -10,36 +10,17 @@
 {% endblock %}
 
 {% block content %}
-    <main role="main">
-        <div class="hero-image">
-            <div class="hero-text">   
-                <h1>Welcome</h1>
-                <p>We aim to assist you in all of your bike maintenance needs.</p>
-                <p>With our Bike Maintenance Engineers travel directly to you at home and completing all the work there on your doorstep.</p>
-                <p>Check out what services are available to our customers below or start your journey by registering an account with us.</p>
-                <a href="#" class="btn btn-secondary rounded text-uppercase my-4 btn-black">Get started »</a>
-            </div>
+    <div class="container home-container">
+         <div class="container">
+            <h1>Welcome</h1>
         </div>
 
-        <div class="container-fluid service-cards">
-            <div>
-                <h2>Level 1</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p>£44.99</p>
-                <p><a href="#" class="btn btn-secondary btn-black" role="button">View details »</a></p>
-            </div>
-            <div>
-                <h2>Level 2</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p>£89.99</p>
-                <p><a href="#" class="btn btn-secondary btn-black" role="button">View details »</a></p>
-            </div>
-            <div>
-                <h2>Level 3</h2>
-                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                <p>£179.99</p>
-                <p><a href="#" class="btn btn-secondary btn-black" role="button">View details »</a></p>
-            </div>
+        <div class="home-image"></div>
+        <div class="home-text">
+            <p>We aim to assist you in all of your bike maintenance needs.</p>
+            <p>With our Bike Maintenance Engineers travel directly to you at home and completing all the work there on your doorstep.</p>
+            <p>Check out what services are available to our customers below or start your journey by registering an account with us.</p>
+            <a href="#" class="btn btn-secondary rounded text-uppercase my-4 btn-black">Get started »</a>
         </div>
-</main>
+    </div>
 {% endblock %}

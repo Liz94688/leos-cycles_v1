@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container top-margin">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container service-container">
+        <div class="container">
+            <h1>Services</h1>
+        </div>
+
+        <div class="container service-cards">
+            {% for service in object_list %}
+                <div class="card">
+                    <h2><a href="{% url 'service_detail' service.pk %}"> {{ service.name }} </a></h2>
+                    <p>{{ service.price }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

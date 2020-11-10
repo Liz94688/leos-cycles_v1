@@ -1,3 +1,12 @@
-from django.shortcuts import render
+from django.views.generic import ListView, DetailView
+from .models import Level
 
-# Create your views here.
+
+class ServicesView(ListView):
+    model = Level
+    template_name = 'services/services.html'
+
+
+class ServiceDetailView(DetailView):
+    model = Level
+    template_name = 'services/service_details.html'
